@@ -3,6 +3,6 @@ namespace MovieApi.Domain.DTOs;
 public record MovieResponseDto(
     Guid Id,
     string Title,
-    string? Genre,
+    List<string> Genre,
     DateOnly ReleaseDate
     );

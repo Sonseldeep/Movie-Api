@@ -7,12 +7,11 @@ public record CreateMovieRequestDto
     [Required(ErrorMessage = "Title is required")]
     [StringLength(100, ErrorMessage = "Title cannot be longer than 100 characters")]
     string Title,
-    
+
     [Required(ErrorMessage = "Genre is required")]
-    [StringLength(20, ErrorMessage = "Genre cannot be longer than 20 characters")]
-    string Genre,
-    
+    [MinLength(1, ErrorMessage = "At least one genre is required")]
+    List<string> Genre,
+
     [Required(ErrorMessage = "ReleaseDate is required")]
     DateOnly ReleaseDate
 );
-    

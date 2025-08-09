@@ -1,0 +1,17 @@
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Infrastructure\bin\Debug\net8.0\MovieApi.Infrastructure.deps.json
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Infrastructure\bin\Debug\net8.0\MovieApi.Infrastructure.runtimeconfig.json
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Infrastructure\bin\Debug\net8.0\MovieApi.Infrastructure.dll
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Infrastructure\bin\Debug\net8.0\MovieApi.Infrastructure.pdb
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Infrastructure\bin\Debug\net8.0\MovieApi.Domain.dll
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Infrastructure\bin\Debug\net8.0\MovieApi.Domain.pdb
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Infrastructure\obj\Debug\net8.0\MovieApi.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Infrastructure\obj\Debug\net8.0\MovieApi.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Infrastructure\obj\Debug\net8.0\MovieApi.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Infrastructure\obj\Debug\net8.0\MovieApi.Infrastructure.AssemblyInfo.cs
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Infrastructure\obj\Debug\net8.0\MovieApi.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Infrastructure\obj\Debug\net8.0\MovieApi.Infrastructure.csproj.CopyComplete
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Infrastructure\obj\Debug\net8.0\MovieApi.Infrastructure.dll
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Infrastructure\obj\Debug\net8.0\refint\MovieApi.Infrastructure.dll
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Infrastructure\obj\Debug\net8.0\MovieApi.Infrastructure.pdb
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Infrastructure\obj\Debug\net8.0\MovieApi.Infrastructure.genruntimeconfig.cache
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Infrastructure\obj\Debug\net8.0\ref\MovieApi.Infrastructure.dll

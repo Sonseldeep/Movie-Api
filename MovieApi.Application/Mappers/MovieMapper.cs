@@ -21,5 +21,13 @@ public static class MovieMapper
         };
 
     }
+    public static void UpdateEntity(this UpdateMovieRequestDto dto, Movie movie)
+    {
+        movie.Title = dto.Title;
+        movie.Genre = dto.Genre;
+        movie.ReleaseDate = dto.ReleaseDate;
+    }
+    
+ 
 
 }

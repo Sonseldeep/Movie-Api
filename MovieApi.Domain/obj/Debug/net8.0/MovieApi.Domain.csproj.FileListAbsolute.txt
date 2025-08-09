@@ -1,0 +1,11 @@
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Domain\bin\Debug\net8.0\MovieApi.Domain.deps.json
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Domain\bin\Debug\net8.0\MovieApi.Domain.dll
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Domain\bin\Debug\net8.0\MovieApi.Domain.pdb
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Domain\obj\Debug\net8.0\MovieApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Domain\obj\Debug\net8.0\MovieApi.Domain.AssemblyInfoInputs.cache
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Domain\obj\Debug\net8.0\MovieApi.Domain.AssemblyInfo.cs
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Domain\obj\Debug\net8.0\MovieApi.Domain.csproj.CoreCompileInputs.cache
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Domain\obj\Debug\net8.0\MovieApi.Domain.dll
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Domain\obj\Debug\net8.0\refint\MovieApi.Domain.dll
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Domain\obj\Debug\net8.0\MovieApi.Domain.pdb
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Domain\obj\Debug\net8.0\ref\MovieApi.Domain.dll

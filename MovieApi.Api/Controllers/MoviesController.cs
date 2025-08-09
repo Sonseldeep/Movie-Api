@@ -3,7 +3,7 @@
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-
+using MovieApi.Api.Routes;
 using MovieApi.Application.Mappers;
 using MovieApi.Domain.DTOs;
 
@@ -19,17 +19,15 @@ public class MoviesController : ControllerBase
         _dbContext = dbContext;
     }
     
-    [HttpGet("/api/movies")]
+    [HttpGet(MovieEndpoints.Movies.GetAll)]
     [ProducesResponseType(StatusCodes.Status200OK)]
-   
-   
     public async Task<IActionResult> GetMovies()
     {
         var movies = await _dbContext.Movies.ToListAsync();
         return Ok(movies.Select(m => m.ToResponseDto()));
     }
 
-    [HttpGet("/api/movies/{id:guid}")]
+    [HttpGet(MovieEndpoints.Movies.Get)]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> GetMovie([FromRoute] Guid id)
@@ -42,7 +40,7 @@ public class MoviesController : ControllerBase
         return Ok(movie.ToResponseDto());
     }
 
-    [HttpPost("/api/movies")]
+    [HttpPost(MovieEndpoints.Movies.Create)]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> CreateMovie([FromBody] CreateMovieRequestDto dto  )
@@ -60,7 +58,7 @@ public class MoviesController : ControllerBase
     }
 
 
-    [HttpPut("/api/movies/{id:guid}")]
+    [HttpPut(MovieEndpoints.Movies.Update)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     
@@ -82,7 +80,7 @@ public class MoviesController : ControllerBase
         return NoContent();
     }
 
-    [HttpDelete("/api/movies/{id:guid}")]
+    [HttpDelete(MovieEndpoints.Movies.Delete)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
 

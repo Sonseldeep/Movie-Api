@@ -15,3 +15,4 @@ C:\Users\97798\RiderProjects\MovieApi\MovieApi.Infrastructure\obj\Debug\net8.0\r
 C:\Users\97798\RiderProjects\MovieApi\MovieApi.Infrastructure\obj\Debug\net8.0\MovieApi.Infrastructure.pdb
 C:\Users\97798\RiderProjects\MovieApi\MovieApi.Infrastructure\obj\Debug\net8.0\MovieApi.Infrastructure.genruntimeconfig.cache
 C:\Users\97798\RiderProjects\MovieApi\MovieApi.Infrastructure\obj\Debug\net8.0\ref\MovieApi.Infrastructure.dll
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Infrastructure\obj\Debug\net8.0\MovieApi.Infrastructure.sourcelink.json

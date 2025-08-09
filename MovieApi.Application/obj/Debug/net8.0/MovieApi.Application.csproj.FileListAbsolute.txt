@@ -13,3 +13,4 @@ C:\Users\97798\RiderProjects\MovieApi\MovieApi.Application\obj\Debug\net8.0\Movi
 C:\Users\97798\RiderProjects\MovieApi\MovieApi.Application\obj\Debug\net8.0\refint\MovieApi.Application.dll
 C:\Users\97798\RiderProjects\MovieApi\MovieApi.Application\obj\Debug\net8.0\MovieApi.Application.pdb
 C:\Users\97798\RiderProjects\MovieApi\MovieApi.Application\obj\Debug\net8.0\ref\MovieApi.Application.dll
+C:\Users\97798\RiderProjects\MovieApi\MovieApi.Application\obj\Debug\net8.0\MovieApi.Application.sourcelink.json

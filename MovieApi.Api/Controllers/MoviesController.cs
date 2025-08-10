@@ -21,7 +21,7 @@ public class MoviesController : ControllerBase
     
     [HttpGet(MovieEndpoints.Movies.GetAll)]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetMovies([FromQuery] string? filterOn, [FromQuery] string? filterQuery, [FromQuery] string? sortBy, [FromQuery] bool isAscending = true)
+    public async Task<IActionResult> GetMovies([FromQuery] string? filterOn, [FromQuery] string? filterQuery, [FromQuery] string? sortBy, [FromQuery] bool isAscending = true, [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
     {
         // filter garda 1st step is AsQueryable garaune
         var moviesQuery = _dbContext.Movies.AsNoTracking().AsQueryable();
@@ -47,6 +47,13 @@ public class MoviesController : ControllerBase
                 moviesQuery = isAscending ? moviesQuery.OrderBy(m => m.ReleaseDate) : moviesQuery.OrderByDescending(m => m.ReleaseDate);
             }
         }
+        
+        // Pagination
+        var skip = (pageNumber - 1) * pageSize;
+        moviesQuery = moviesQuery.Skip(skip).Take(pageSize);
+        
+        
+        
         // 3rd step is to execute the query
         var movies = await moviesQuery.ToListAsync();
         return Ok(movies.Select(m => m.ToResponseDto()));

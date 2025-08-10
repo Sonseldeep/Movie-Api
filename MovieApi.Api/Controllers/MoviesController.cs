@@ -21,9 +21,21 @@ public class MoviesController : ControllerBase
     
     [HttpGet(MovieEndpoints.Movies.GetAll)]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetMovies()
+    public async Task<IActionResult> GetMovies([FromQuery] string? filterOn, [FromQuery] string? filterQuery)
     {
-        var movies = await _dbContext.Movies.ToListAsync();
+        // filter garda 1st step is AsQueryable garaune
+        var moviesQuery = _dbContext.Movies.AsNoTracking().AsQueryable();
+        // 2nd sept is apply filter if provided
+
+        if (!string.IsNullOrEmpty(filterQuery) && !string.IsNullOrWhiteSpace(filterQuery))
+        {
+            if (filterOn.Equals("Title", StringComparison.OrdinalIgnoreCase))
+            {
+                moviesQuery = moviesQuery.Where(m => m.Title.Contains(filterQuery));
+            }
+        }
+        // 3rd step is to execute the query
+        var movies = await moviesQuery.ToListAsync();
         return Ok(movies.Select(m => m.ToResponseDto()));
     }
 

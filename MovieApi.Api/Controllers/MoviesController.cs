@@ -21,7 +21,7 @@ public class MoviesController : ControllerBase
     
     [HttpGet(MovieEndpoints.Movies.GetAll)]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetMovies([FromQuery] string? filterOn, [FromQuery] string? filterQuery)
+    public async Task<IActionResult> GetMovies([FromQuery] string? filterOn, [FromQuery] string? filterQuery, [FromQuery] string? sortBy, [FromQuery] bool isAscending = true)
     {
         // filter garda 1st step is AsQueryable garaune
         var moviesQuery = _dbContext.Movies.AsNoTracking().AsQueryable();
@@ -29,9 +29,22 @@ public class MoviesController : ControllerBase
 
         if (!string.IsNullOrEmpty(filterQuery) && !string.IsNullOrWhiteSpace(filterQuery))
         {
-            if (filterOn.Equals("Title", StringComparison.OrdinalIgnoreCase))
+            if (filterOn != null && filterOn.Equals("Title", StringComparison.OrdinalIgnoreCase))
             {
                 moviesQuery = moviesQuery.Where(m => m.Title.Contains(filterQuery));
+            }
+        }
+        // Sorting
+        if (!string.IsNullOrWhiteSpace(sortBy))
+        {
+            if (sortBy.Equals("Title", StringComparison.OrdinalIgnoreCase))
+            {
+                moviesQuery = isAscending
+                    ? moviesQuery.OrderBy(m => m.Title) 
+                    : moviesQuery.OrderByDescending(m => m.Title);
+            } else if (sortBy.Equals("ReleaseDate", StringComparison.OrdinalIgnoreCase))
+            {
+                moviesQuery = isAscending ? moviesQuery.OrderBy(m => m.ReleaseDate) : moviesQuery.OrderByDescending(m => m.ReleaseDate);
             }
         }
         // 3rd step is to execute the query

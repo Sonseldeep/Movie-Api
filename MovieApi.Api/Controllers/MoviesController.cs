@@ -27,9 +27,9 @@ public class MoviesController : ControllerBase
         var moviesQuery = _dbContext.Movies.AsNoTracking().AsQueryable();
         // 2nd sept is apply filter if provided
 
-        if (!string.IsNullOrEmpty(filterQuery) && !string.IsNullOrWhiteSpace(filterQuery))
+        if (!string.IsNullOrWhiteSpace(filterQuery) && !string.IsNullOrWhiteSpace(filterQuery))
         {
-            if (filterOn != null && filterOn.Equals("Title", StringComparison.OrdinalIgnoreCase))
+            if (filterOn.Equals("Title", StringComparison.OrdinalIgnoreCase))
             {
                 moviesQuery = moviesQuery.Where(m => m.Title.Contains(filterQuery));
             }
